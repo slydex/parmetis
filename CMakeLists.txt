@@ -11,7 +11,7 @@ include(FindMPI)
 if(NOT MPI_FOUND)
   message(FATAL_ERROR "mpi is not found")
 endif()
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${MPI_C_COMPILE_FLAGS}")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${MPI_C_COMPILE_FLAGS} -Wno-unused-label -Wno-misleading-indentation")
 
 include(${GKLIB_PATH}/GKlibSystem.cmake)
 
