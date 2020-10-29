@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(ParMETIS)
 
+add_definition(-w)
+
 set(GKLIB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/metis/GKlib)
 set(METIS_PATH ${CMAKE_CURRENT_SOURCE_DIR}/metis)
 message(STATUS "GKLIB_PATH=${GKLIB_PATH}")
